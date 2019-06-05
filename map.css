@@ -1,0 +1,28 @@
+.sassy-theme .esri-widget,
+.sassy-theme .esri-widget--button,
+.sassy-theme .esri-menu,
+.sassy-theme .esri-popup__main-container,
+.sassy-theme .esri-popup .esri-popup__pointer-direction,
+.sassy-theme .esri-popup .esri-popup__button,
+.sassy-theme .esri-button,
+.sassy-theme .esri-input,
+.sassy-theme .esri-widget a {
+ background-color: #5e1071;
+ color: #fff;
+  border-radius: 20px;
+}
+.sassy-theme .esri-feature__media-item img   {
+ width:180px;
+ height: 200px;
+ text-align:left;
+}
+.sassy-theme .esri-feature__field-header,
+.sassy-theme .esri-feature__field-data{
+color:#fff;
+}
+.sassy-theme .esri-popup__header-title{
+  color:#fff;
+  text-align: center;
+  font-size: 30px;
+  
+}
