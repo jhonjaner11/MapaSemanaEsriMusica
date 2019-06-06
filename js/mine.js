@@ -55,9 +55,9 @@ require([
                 type: "media",
                 mediaInfos: [
                   {
-                    title: "Imagen",
+                    title: "",
                     type: "image",
-                      caption: "Imagen del artista",
+
                     value: {
                       sourceURL:"{imagen}"
                     }

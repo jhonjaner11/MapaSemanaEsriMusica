@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Artistas Colombianos</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="map.css">
+    <style>
+    html, body, #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+  </style>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.11/"></script>
+    <script>
+    require([
+              "esri/Map",
+              "esri/views/MapView",
+              "esri/layers/FeatureLayer",
+              "esri/PopupTemplate"
+            ], function(Map, MapView,FeatureLayer,  popupTemplate) {
+
+            var map = new Map({
+              basemap: "streets-night-vector"
+            });
+
+            var view = new MapView({
+              container: "viewDiv",
+              map: map,
+              center: [-73.783892,2.8894434],
+              zoom: 5,
+              popup: {
+                dockEnabled: true,
+                dockOptions: {
+                  // Disables the dock button from the popup
+                  buttonEnabled: false,
+                  // Ignore the default sizes that trigger responsive docking
+                  breakpoint: false
+                }},
+             });
+
+            const layer = new FeatureLayer({
+             url: "https://services.arcgis.com/8DAUcrpQcpyLMznu/arcgis/rest/services/Artistas/FeatureServer/0"
+          });
+          map.add(layer);
+          var template = {
+                // autocasts as new PopupTemplate()
+                title: "{Nombre}",
+                content: [
+                  {
+                    type: "fields",
+                    fieldInfos: [
+                      {
+                        fieldName: "Lugar",
+                        label: "LUGAR"
+                      },
+                      {
+                        fieldName: "GENERO",
+                        label: "GENERO",
+                        format: {
+                          digitSeparator: true,
+                          places: 0
+                        }
+                      },
+
+                    ]
+                  },
+                  {
+                    type: "media",
+                    mediaInfos: [
+                      {
+                        title: "",
+                        type: "image",
+
+                        value: {
+                          sourceURL:"{imagen}"
+                        }
+                      },
+                    ]
+                  }
+
+                ]
+              }
+
+             layer.popupTemplate = template;
+
+        });
+
+    </script>
+</head>
+
+<body  class="sassy-theme" >
+    <!-- ##### Preloader ##### -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="circle-preloader">
+            <img src="img/core-img/compact-disc.png" alt="">
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="musica-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container-fluid">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="musicaNav">
+
+                        <!-- Nav brand -->
+                        <a href="index.html" class="nav-brand"><img src="img/core-img/logo.png" alt=""></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="concert-tours.html">Mapa</a></li>
+                                    <li><a href="about-us.html">Artistas</a></li>
+                                    <li><a href="#">Generos</a>
+                                        <ul class="dropdown">
+                                            <li><a href="regueton.html">Reguetón</a></li>
+                                            <li><a href="about-us.html">Salsa</a></li>
+                                            <li><a href="elements.html">Rap</a></li>
+                                            <li><a href="blog.html">Rock</a></li>
+                                            <li><a href="vallenato.html">vallenato</a></li>
+                                            <li><a href="popular.html">popular</a></li>
+                                            <li><a href="otros.html">otros</a></li>
+
+
+                                        </ul>
+                                    </li>
+
+
+                                    <!--<li><a href="contact.html">Contacto</a></li>-->
+                                </ul>
+
+                                <!-- Social Button -->
+                                <div class="top-social-info">
+                                    <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                </div>
+
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Breadcumb Area Start ##### -->
+    <div class="breadcumb-area bg-img bg-overlay2" style="background-image: url(img/bg-img/breadcumb2.jpg);">
+        <div class="bradcumbContent">
+            <h2>Mapa de Artistas</h2>
+        </div>
+    </div>
+    <!-- bg gradients -->
+
+    <!-- ##### Breadcumb Area End ##### -->
+
+    <!-- ##### Search Shows Area Start ##### -->
+  <div id="viewDiv"></div>
+    <!-- ##### Search Shows Area End ##### -->
+
+    <!-- ##### CTA Area Start ##### -->
+
+    <!-- ##### CTA Area End ##### -->
+
+    <!-- ##### Footer Area Start ##### -->
+
+    <!-- ##### Footer Area Start ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+</body>
+
+</html>
