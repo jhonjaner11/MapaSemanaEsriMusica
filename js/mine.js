@@ -40,7 +40,8 @@ require([
                     fieldName: "Lugar",
                     label: "LUGAR"
                   },
-                  {
+
+                        {
                     fieldName: "GENERO",
                     label: "GENERO",
                     format: {
@@ -55,13 +56,18 @@ require([
                 type: "media",
                 mediaInfos: [
                   {
-                    title: "",
+
                     type: "image",
 
                     value: {
                       sourceURL:"{imagen}"
-                    }
+                    },
+                      title: "<div id='Contenedor_Redes'> <a href='{Spotify}' target='_blank'> <div id='facebookgeo'style=' width: 33px;  height: 35px; border-radius:20px; text-align:center; background-image: url(img/artistas/spotify.png); float: left; background-position: center; background-repeat: no-repeat;'></div></a><div id='Contenedor_Redes'> <a href='{Spotify}' target='_blank'> <div id='facebookgeo¿style=' width: 33px;  height: 35px; border-radius:16px; background-image: url(img/artistas/spotify.png); float: left; background-position: center; background-repeat: no-repeat;'></div> </a>  <a href='{Youtube}' target='_blank'> <div id='facebookgeo'style=' width: 33px;  height: 35px; margin-left:15px; border-radius:12px;  background-image: url(img/artistas/youtube.png); float: left; background-position: center; background-repeat: no-repeat;'></div></a><div id='Contenedor_Redes'> <a href='{Youtube}' target='_blank'> <div id='facebookgeo¿style=' width: 33px;  height: 35px;background-image: url(img/artistas/youtube.png); float: left; background-position: center; background-repeat: no-repeat;'></div> </a> </div>"
+
                   },
+
+
+
                 ]
               }
 

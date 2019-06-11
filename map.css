@@ -26,3 +26,7 @@ color:#fff;
   font-size: 20px;
 
 }
+
+.sassy-theme .esri-feature__media-item-title{
+  text-align: center;
+}
