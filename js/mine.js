@@ -13,8 +13,8 @@ require([
         var view = new MapView({
           container: "viewDiv",
           map: map,
-          center: [-73.783892,2.8894434],
-          zoom: 5,
+          center: [-73.783892,5.5],
+          zoom: 5.5,
           popup: {
             dockEnabled: true,
             dockOptions: {
@@ -62,7 +62,7 @@ require([
                     value: {
                       sourceURL:"{imagen}"
                     },
-                      title: "<div id='Contenedor_Redes'> <a href='{Spotify}' target='_blank'> <div id='facebookgeo'style=' width: 33px;  height: 35px; border-radius:20px; text-align:center; background-image: url(img/artistas/spotify.png); float: left; background-position: center; background-repeat: no-repeat;'></div></a><div id='Contenedor_Redes'> <a href='{Spotify}' target='_blank'> <div id='facebookgeo¿style=' width: 33px;  height: 35px; border-radius:16px; background-image: url(img/artistas/spotify.png); float: left; background-position: center; background-repeat: no-repeat;'></div> </a>  <a href='{Youtube}' target='_blank'> <div id='facebookgeo'style=' width: 33px;  height: 35px; margin-left:15px; border-radius:12px;  background-image: url(img/artistas/youtube.png); float: left; background-position: center; background-repeat: no-repeat;'></div></a><div id='Contenedor_Redes'> <a href='{Youtube}' target='_blank'> <div id='facebookgeo¿style=' width: 33px;  height: 35px;background-image: url(img/artistas/youtube.png); float: left; background-position: center; background-repeat: no-repeat;'></div> </a> </div>"
+                      title: "<div id='Contenedor_Redes' align='center'> <a href='{Spotify}' target='_blank'> <div id='facebookgeo'style=' width: 33px;  height: 35px; border-radius:20px; text-align:center; background-image: url(https://image.flaticon.com/icons/svg/174/174872.svg); float: left; background-position: center; background-repeat: no-repeat;'></div></a><div id='Contenedor_Redes'> <a href='{Spotify}' target='_blank'> <div id='facebookgeo¿style=' width: 33px;  height: 35px; border-radius:16px; background-image: url(https://image.flaticon.com/icons/svg/174/174872.svg); float: left; background-position: center; background-repeat: no-repeat;'></div> </a> <a href='{Youtube}' target='_blank'> <div id='facebookgeo'style=' width: 33px;  height: 35px; margin-left:15px; border-radius:12px;  background-image: url(https://image.flaticon.com/icons/svg/174/174883.svg); float: left; background-position: center; background-repeat: no-repeat;'></div></a><div id='Contenedor_Redes'> <a href='{Youtube}' target='_blank'> <div id='facebookgeo¿style=' width: 33px;  height: 35px;background-image: url(https://image.flaticon.com/icons/svg/174/174883.svg); float: left; background-position: center; background-repeat: no-repeat;'></div> </a> </div>"
 
                   },
 
