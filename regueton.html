@@ -55,9 +55,21 @@
                 }},
              });
 
-            const layer = new FeatureLayer({
-             url: "https://services.arcgis.com/8DAUcrpQcpyLMznu/arcgis/rest/services/Artistas_1_2/FeatureServer/3?token=3bI8-CKl4h0J43UPi-as4egZZzdrAa19U71EhF1aUeLa7aMV5M_w-cy61LzNc1Rd2fupq-8Puct3MI0EQVQG2N3FrBugr2anGMRM3giMdthOdMYSuqjGtMXl2jq0PHCD4bI7WrU53uX6oV2aeFaI60csu2TOoJxBfsCmbPnuLt2tzd3I65uCI2s3fnJBILSU_el2ASrc4Q6nAHlsOZysjQ5VGEIUdKpMoPQBVJuarsg9r2hNrt0Sl97vMgUQhfrM"
-          });
+             //simbologia por link
+            const icono = {
+               type: "simple", // autocasts as new SimpleRenderer()
+               symbol: {
+                 type: "picture-marker",  // autocasts as new PictureMarkerSymbol()
+                 url: "https://image.flaticon.com/icons/svg/148/148744.svg", // autocasts as new SimpleMarkerSymbol()
+                 size: 5
+               }
+             };
+             const layer = new FeatureLayer({
+              url: "https://services.arcgis.com/8DAUcrpQcpyLMznu/arcgis/rest/services/Artistas/FeatureServer/0",
+              //sentencia SQL filtrar
+              definitionExpression: "GENERO like '%uetón%'",
+              renderer:icono
+           });
           map.add(layer);
           var template = {
                 // autocasts as new PopupTemplate()
